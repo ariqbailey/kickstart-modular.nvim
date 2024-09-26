@@ -108,6 +108,13 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- TODO: make shortcut to search other folders of files: Obsidian, etc.
+
+      -- Shortcut for searching Workspace files
+      vim.keymap.set('n', '<leader>sw', function()
+        builtin.find_files { cwd = '/mnt/c/Workspace/' }
+      end, { desc = '[S]earch [W]orkspace files' })
     end,
   },
 }
